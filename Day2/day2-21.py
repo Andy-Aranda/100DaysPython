@@ -23,5 +23,6 @@ sum = first_number_int + second_number_int
 sum_str = str(sum)
 
 
-print(first_number " + " second_number " = " sum_str)
+print(first_number + " + " + second_number + " = "+ sum_str)
+
 print(sum_str)
