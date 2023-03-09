@@ -35,5 +35,9 @@ while at_goal() == False:
     jump(turn_right)
     #i -= 1
 
+#en la funcion de arriba también pude escribir:
+while at_goal() == False:
+    jump(turn_right)
+    #i -= 1
 
 '''
