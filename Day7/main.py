@@ -1,5 +1,5 @@
-#Step 3
 import random
+import os
 from hangman_art import logo, stages
 from hangman_words import word_list
 
@@ -27,6 +27,8 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    os.system("clear")
+
     if guess in display:
       print(f"You've already choose this letter {guess} and is correct")
     #Check guessed letter
@@ -38,7 +40,7 @@ while not end_of_game:
 
     if guess not in chosen_word:
       print(f"Your election {guess} is not in the chosen word. -1 live")
-        lives -= 1
+      lives -= 1
 
 
     print(f"{' '.join(display)}")
@@ -50,5 +52,7 @@ while not end_of_game:
         print("You win.")
     elif lives == 0:
         end_of_game = True
-        print("You lose.")
+        print(f"You lose. The word was {chosen_word}")
+
+
     
