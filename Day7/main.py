@@ -1,72 +1,18 @@
 #Step 3
 import random
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+from hangman_art import logo, stages
+from hangman_words import word_list
 
 
 end_of_game = False
-word_list = ["aardvark", "baboon", "camel"]
+word_list = word_list
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 part_of_the_body = -1
 part_of_the_body_old = part_of_the_body
 lives = 6
 
+print(logo)
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
@@ -81,7 +27,8 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
-
+    if guess in display:
+      print(f"You've already choose this letter {guess} and is correct")
     #Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
@@ -90,7 +37,9 @@ while not end_of_game:
             display[position] = letter
 
     if guess not in chosen_word:
+      print(f"Your election {guess} is not in the chosen word. -1 live")
         lives -= 1
+
 
     print(f"{' '.join(display)}")
     print(stages[lives])
