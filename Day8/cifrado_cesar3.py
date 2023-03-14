@@ -48,6 +48,7 @@ while restart:
         direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
         text = input("Type your message:\n").lower()
         shift = int(input("Type the shift number:\n"))
+        shift = shift % 26 #si tenemos un número muy largo, usamos el módulo
         caesar(text, shift, direction)
 
 print("Come back soon!")
