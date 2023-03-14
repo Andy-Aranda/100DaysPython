@@ -52,7 +52,7 @@ while not end_of_game:
         print("You win.")
     elif lives == 0:
         end_of_game = True
-        print(f"You lose. The word was {chosen_word}")
+        print(f"You lose. The word was {chosen_word}.")
 
 
     
