@@ -22,10 +22,10 @@ travel_log["Colombia"] = {"cities_visited": ["Bogotá", "Santa Marta"], "total_v
 
 
 
-#print(f"travel_log = {travel_log}")
-for country in travel_log: #para cada llave en travel_log
-    print(country) #imprime el país (llave)
-    print(travel_log[country]) #imprime el valor de la llave, se accede así: nombre_de_la_lista[key] (así accedo al valor de la llave)
+print(f"travel_log = {travel_log}")
+# for country in travel_log: #para cada llave en travel_log
+#     print(country) #imprime el país (llave)
+#     print(travel_log[country]) #imprime el valor de la llave, se accede así: nombre_de_la_lista[key] (así accedo al valor de la llave)
 
 '''es mejor anidar listas en diccionarios o diccionarios en diccionarios, 
 por la forma en que se estructuran los datos'''
