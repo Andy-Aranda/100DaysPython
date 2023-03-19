@@ -11,7 +11,7 @@ def apuestas(nombre, valor):
     apuestas[nombre] = valor
     max_valor = 0
     max_apostador = 0
-    max_apostador = "Nadie"
+    max_apostador = ""
 
     respuesta = input("Quieres agregar a alguien? y/n: ").lower()
 
