@@ -35,3 +35,5 @@ nombre = input("Whats your name? ")
 valor = int(input("Whats your bid? $"))
 
 apuestas(nombre, valor)
+
+'''La idea era agregar a todos los postores y después revisar cada valor de cada key para encontrar el valor más alto'''
