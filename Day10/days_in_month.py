@@ -11,6 +11,8 @@ def is_leap(year):
         return False
 
 def days_in_month(year, month):
+    """Busca cuántos días tiene el mes de acuerdo al año que le pasamos
+    y le mes del que queremos saber el número de días"""
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     #month_days_leap_year = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
