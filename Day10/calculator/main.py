@@ -17,19 +17,6 @@ def multiply(a, b):
     '''Función para multiplicar dos números'''
     return a * b
 
-def operation(symbol, num1, num2):
-    if symbol == "+":
-        return num1 + num2
-    
-    elif symbol == "-":
-        return num1 - num2
-    
-    elif symbol == "/":
-        return num1 / num2
-    
-    else:
-        return num1 * num2
-
 operations = {
     #llama a las funciones de acuerdo a la clave que se elige
     "+": add,
@@ -39,13 +26,14 @@ operations = {
 }
 
 a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
 
 for symbol in operations:
     print(symbol)
 
 operation_symbol = input("Choose an operation symbol from above: ")
-result = operation(operation_symbol, a, b) #guarda lo que retorne final_operation
+result = operations[operation_symbol] #guarda lo que retorne la operación seleccionada de acuerdo a operations
+b = int(input("Enter the second number: "))
+result = result(a, b)
 
 print(f"{a} {operation_symbol} {b} = {result}")
 
