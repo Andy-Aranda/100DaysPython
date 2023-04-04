@@ -1,5 +1,5 @@
 from art import logo
-print(logo)
+
 
 def add(a, b):
     '''Función para sumar dos números'''
@@ -25,16 +25,30 @@ operations = {
     "/": division
 }
 
-a = int(input("Enter the first number: "))
+def calculator():
+    print(logo)
+    a = float(input("Enter the first number: "))
 
-for symbol in operations:
-    print(symbol)
+    for symbol in operations:
+        print(symbol)
 
-operation_symbol = input("Choose an operation symbol from above: ")
-result = operations[operation_symbol] #guarda lo que retorne la operación seleccionada de acuerdo a operations
-b = int(input("Enter the second number: "))
-result = result(a, b)
+    restart = True
 
-print(f"{a} {operation_symbol} {b} = {result}")
+    while restart:
+        operation_symbol = input("Choose an operation symbol from above: ")
+        b = float(input("Enter the second number: "))
+        result = operations[operation_symbol] #guarda lo que retorne la operación seleccionada de acuerdo a operations
+        result1 = result(a, b) #en result se guarda lo que resulte de llamar a result (que ees una funcio+on definida en la línea 34 para )
+        print(f"{a} {operation_symbol} {b} = {result1}")
+
+
+        if input("Do you want to realize another operation? Y/N ").lower() == "y":
+            a = result1
+        else:
+            restart = False
+    print("Come back soon!")
+
+
+calculator()
 
 
